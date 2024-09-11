@@ -65,7 +65,7 @@ jobs:
   ## 
       
       # Create new environment
-      - name: Check if 'dev' environment exists
+      - name: Check if '${{ inputs.AZURE_ENV_NAME }}' environment exists
         id: check-env
         run: |
           if azd env list | grep -q ${{ inputs.AZURE_ENV_NAME }}; then
